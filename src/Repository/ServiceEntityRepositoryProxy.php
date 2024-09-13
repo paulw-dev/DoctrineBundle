@@ -111,7 +111,7 @@ class ServiceEntityRepositoryProxy extends EntityRepository implements ServiceEn
         return ($this->repository ??= $this->resolveRepository())->getClassMetadata();
     }
 
-    public function matching(Criteria $criteria): AbstractLazyCollection&Selectable
+    public function matching(Criteria $criteria): AbstractLazyCollection
     {
         return ($this->repository ??= $this->resolveRepository())->matching($criteria);
     }
